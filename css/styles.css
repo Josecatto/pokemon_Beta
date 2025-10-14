@@ -1,0 +1,200 @@
+/* -------------------------------
+   Pokédex de Kanto — Estilo Azul
+   Autor: Jose Navia
+--------------------------------*/
+
+:root {
+  --color-bg: #e6f0ff;
+  --color-card: #ffffff;
+  --color-primary: #2a75bb;
+  --color-secondary: #3c5aa6;
+  --color-accent: #ffcb05;
+  --text-dark: #1a1a1a;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, var(--color-bg) 0%, #d4e1ff 100%);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* -------------------------------
+   Encabezado principal
+--------------------------------*/
+header {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.4em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+/* -------------------------------
+   Controles de búsqueda
+--------------------------------*/
+.controls {
+  margin: 25px 0;
+}
+
+input {
+  padding: 12px 16px;
+  width: 260px;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  outline: none;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 8px var(--color-secondary);
+}
+
+button {
+  padding: 12px 20px;
+  margin-left: 8px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: var(--color-secondary);
+  transform: scale(1.05);
+}
+
+/* -------------------------------
+   Tarjetas de Pokémon
+--------------------------------*/
+.pokemon-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.pokemon-card {
+  background: var(--color-card);
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 14px var(--shadow);
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-top: 10px;
+  transition: transform 0.3s;
+}
+
+.pokemon-card:hover img {
+  transform: scale(1.1);
+}
+
+.pokemon-card h3 {
+  text-transform: capitalize;
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: var(--color-secondary);
+}
+
+.pokemon-card p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* -------------------------------
+   Página de detalle
+--------------------------------*/
+.detalle-container {
+  margin: 40px auto;
+  max-width: 420px;
+  background: var(--color-card);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px var(--shadow);
+  padding: 25px;
+  text-align: center;
+}
+
+.detalle-container img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.detalle-container h2 {
+  color: var(--color-secondary);
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.detalle-container p {
+  font-size: 1em;
+  margin: 6px 0;
+  color: #444;
+}
+
+/* -------------------------------
+   Footer
+--------------------------------*/
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  background: var(--color-secondary);
+  color: white;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------------
+   Animación sutil
+--------------------------------*/
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pokemon-card, .detalle-container {
+  animation: fadeIn 0.6s ease forwards;
+}
