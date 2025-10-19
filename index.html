@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokédex de Kanto</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pokédex Navia y Aldana - Kanto</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- === Header con navegación y botones === -->
   <header>
-    <h1>Pokédex de Kanto</h1>
-    <p>Explora los Pokémon originales de la región de Kanto 🔥🌊🌱⚡</p>
+    <div class="nav-links">
+      <h1>Pokédex Navia y Aldana - Kanto (1–151)</h1>
+    </div>
+    <div class="user-buttons">
+      <button class="boton" onclick="window.location.href='login.html'">Iniciar sesión</button>
+      <button class="boton" onclick="window.location.href='login.html'">Registrarse</button>
+      <button class="boton" onclick="window.location.href='perfil.html'">Perfil</button>
+    </div>
   </header>
 
+  <!-- === Controles de búsqueda === -->
   <main>
     <div class="controls">
-      <input id="searchInput" type="text" placeholder="🔍 Busca un Pokémon (ej. Pikachu)">
+      <input id="searchInput" placeholder="Buscar por nombre (ej. pikachu)">
       <button id="searchBtn">Buscar</button>
+      <button id="resetBtn">Mostrar todos</button>
     </div>
 
+    <!-- === Contenedor del catálogo de Pokémon === -->
     <section id="pokemonContainer" class="pokemon-container"></section>
   </main>
-
-  <footer>
-    Hecho por Jose Navia — Proyecto Pokédex 🧩
-  </footer>
 
   <script src="js/script.js"></script>
 </body>

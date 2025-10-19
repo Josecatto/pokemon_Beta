@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Login / Registro</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+  <main class="auth-container">
+    <section>
+      <h2>Registro</h2>
+      <input id="reg_nombre" placeholder="Nombre">
+      <input id="reg_correo" placeholder="Correo">
+      <input id="reg_pass" placeholder="Contraseña" type="password">
+      <button id="reg_btn">Registrar</button>
+    </section>
+
+    <section>
+      <h2>Login</h2>
+      <input id="log_correo" placeholder="Correo">
+      <input id="log_pass" placeholder="Contraseña" type="password">
+      <button id="log_btn">Iniciar sesión</button>
+    </section>
+  </main>
+<p>¿No tienes cuenta?<a href="#" onclick="window.location.href='index.html'">Volver al catálogo</a></p>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
